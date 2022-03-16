@@ -1,7 +1,7 @@
 $connectTestResult = Test-NetConnection -ComputerName obprdstgtools001.file.core.windows.net -Port 445
 if ($connectTestResult.TcpTestSucceeded) {
     # Save the password so the drive will persist on reboot
-    cmd.exe /C "cmdkey /add:`"obprdstgtools001.file.core.windows.net`" /user:`"localhost\obprdstgtools001`" /pass:`"zRkUbAPBi+uN30jv5tjyylYnYh+S0ufIOW4CLtuLPJ37ENR58UovkMvm8D0a2lU3sGVpaBwPuVtwhgXOZ2FQZg==`""
+    cmd.exe /C "cmdkey /add:`"obprdstgtools001.file.core.windows.net`" /user:`"localhost\obprdstgtools001`" /pass:`"5g0DVNL6mYPM5epTUSrLWpJLbwzq+5RUcIGXbz3e3odMMJFcjAivkWYIoI41tOReCeCSoRSv6V+uNnonpZaekw==`""
     # Mount the drive
     New-PSDrive -Name Z -PSProvider FileSystem -Root "\\obprdstgtools001.file.core.windows.net\temporary" -Persist
 } else {
