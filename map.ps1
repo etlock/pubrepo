@@ -1,4 +1,4 @@
-$connectTestResult = Test-NetConnection -ComputerName obprdstgtools001.file.core.windows.net -Port 445
+$connectTestResult = Test-NetConnection -ComputerName obprdstgvmcvc.file.core.windows.net -Port 445
 if ($connectTestResult.TcpTestSucceeded) {
     # Save the password so the drive will persist on reboot
     cmd.exe /C "cmdkey /add:`"obprdstgvmcvc.file.core.windows.net`" /user:`"localhost\obprdstgvmcvc`" /pass:`"lU9PSIGwcfYk5iQ65jqBnUKvlvyb7guUolCkfRdgSpVWLzq+FT7uSvgF1QdXNHqcL9uKgKwTttjPrNlACHpHog==`""
