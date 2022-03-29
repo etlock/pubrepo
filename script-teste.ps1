@@ -30,7 +30,7 @@ Start-Service -Name WinRM
 
 Set-ExecutionPolicy Bypass -NoProfile -NonInteractive -Scope Process -Force [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 Set-WinUserLanguageList -LanguageList pt-pt -Force
-choco install googlechrome -y
+choco install googlechrome -y --ignore-checksums
 choco install mremoteng -y
 choco install git.install -y
 choco install vscode -y
